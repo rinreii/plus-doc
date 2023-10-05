@@ -19,9 +19,13 @@
 	<div class="offcanvas visible-xs">
 		<ul class="offcanvas__nav">
 			
-				<li><a href="/plus-dochttps://ltrobo.com/%e5%b0%8f%e5%9e%8b%e8%b5%b0%e8%a1%8c%e3%83%ad%e3%83%9c%e3%83%83%e3%83%88-plus/">製品ページ</a></li>
+				<li><a href="/plus-doc/manual">マニュアル</a></li>
 			
-				<li><a href="/plus-dochttps://ltrobo.com/infomation_accses/">お問い合わせ</a></li>
+				<li><a href="/plus-doc/hardware">ハードウェア</a></li>
+			
+				<li><a href="/plus-doc/software">ソフトウェア</a></li>
+			
+				<li><a href="/plus-doc/download">ダウンロード</a></li>
 			
 		</ul><!-- /.offcanvas__nav -->
 	</div><!-- /.offcanvas -->
@@ -38,9 +42,13 @@
 					
 						<ul class="site-header__nav hidden-xs">
 							
-								<li><a href="/plus-dochttps://ltrobo.com/%e5%b0%8f%e5%9e%8b%e8%b5%b0%e8%a1%8c%e3%83%ad%e3%83%9c%e3%83%83%e3%83%88-plus/">製品ページ</a></li>
+								<li><a href="/plus-doc/manual">マニュアル</a></li>
 							
-								<li><a href="/plus-dochttps://ltrobo.com/infomation_accses/">お問い合わせ</a></li>
+								<li><a href="/plus-doc/hardware">ハードウェア</a></li>
+							
+								<li><a href="/plus-doc/software">ソフトウェア</a></li>
+							
+								<li><a href="/plus-doc/download">ダウンロード</a></li>
 							
 						</ul><!-- /.site-header__nav -->
 						<button class="offcanvas-toggle visible-xs">
@@ -67,6 +75,14 @@
 								
 									<p class="hero-subheader__desc">初回セットアップ手順および操作方法について説明します。</p>
 								
+								
+									
+									
+										<a href="/plus-doc/hardware" class="btn btn--dark btn--rounded btn--w-icon">
+											<i class="icon icon--arrow-right"></i>
+											ハードウェア
+										</a>
+									
 								
 							</div><!-- /.align-inner -->
 						</div><!-- /.align-container -->
@@ -96,8 +112,8 @@
   <li>Wi-Fi ルーター
     <ul>
       <li>TP-link TL-WR802N<br />
-<!-- ![rooter](../images/rooter.png)   -->
-<img src="../images/rooter.png" width="20%" height="20%" /></li>
+<img src="../images/1.png" alt="rooter" /><br />
+<!-- <img src="../images/1.png" width="20%" height="20%"> --></li>
     </ul>
   </li>
 </ul>
@@ -106,16 +122,14 @@
 その他は PC が必要です。</p>
 <h3 id="制御ボックス内部">制御ボックス内部</h3>
 <p>以下、制御ボックス内部を示します。<br />
-<img src="../images/controlbox.png" alt="controlbox" /></p>
+<img src="../images/2.png" alt="controlbox" /></p>
 <h3 id="バッテリー接続方法">バッテリー接続方法</h3>
 <ol>
   <li>バッテリースペースにバッテリーを置きます。<br />
-<!-- ![buttery1](../images/buttery1.png) -->
-<img src="../images/buttery1.png" width="30%" height="30%" /></li>
+<img src="../images/3.png" alt="buttery1" /></li>
   <li>赤色の配線をバッテリーの赤色に差し込みます。<br />
 同様に黒色の配線をバッテリーの黒色に差し込みます。<br />
-<!-- ![buttery2](../images/buttery2.png) -->
-<img src="../images/buttery2.png" width="30%" height="30%" /></li>
+<img src="../images/4.png" alt="buttery2" /></li>
 </ol>
 
 <p><code class="language-plaintext highlighter-rouge">※配線を正しく繋がないと大変危険です。
@@ -123,10 +137,14 @@
 また、火災の危険性もありますので正しくお使いください。</code></p>
 <h3 id="充電方法">充電方法</h3>
 <ol>
-  <li>バッテリーに繋がれている＋コネクタ及びーコネクタを抜きます。</li>
+  <li>バッテリーに繋がれている＋コネクタ及びーコネクタを抜きます。
+<img src="../images/5.png" alt="charge1" />
+<img src="../images/6.png" alt="charge2" /></li>
   <li>外したコネクタ部分に充電器の赤色を赤色へ接続、黒色を黒色に接続します。
 接続されると充電中のランプが点灯します。
-完了すると完了ランプが点灯します。</li>
+完了すると完了ランプが点灯します。
+<img src="../images/7.png" alt="charge1" />
+<img src="../images/8.png" alt="charge2" /></li>
 </ol>
 
 <h2 id="セットアップ">セットアップ</h2>
@@ -134,6 +152,8 @@
 <p>本手順書では、スマートフォンアプリ Espressif Esptouch を使い M5Stack を Wi-Fi へ接続します。
 App Store または Google Play より予めダウンロードしてください。</p>
 <h3 id="電源投入方法">電源投入方法</h3>
+<p><img src="../images/9.png" alt="poweron" /></p>
+
 <p>バッテリが接続されていることを確認し、電源ボタンを ON にする。
 緊急停止ボタンも赤い部分を回し、解除を行う。
 問題なく電源が投入されれば、M5Stack の画面が点滅します。</p>
@@ -147,7 +167,8 @@ App Store または Google Play より予めダウンロードしてください
 　　　　Reset[C]　　　　 ・・・リセットします
 </code></pre></div>    </div>
   </li>
-  <li>対応するボタンは左から[A] [B] [C]となりますが、一番左の[A]ボタンを押して Wi-Fi 接続待機状態にしておきます。</li>
+  <li>対応するボタンは左から[A] [B] [C]となりますが、一番左の[A]ボタンを押して Wi-Fi 接続待機状態にしておきます。<br />
+<img src="../images/10.png" alt="ABC" /></li>
 </ol>
 
 <h4 id="wi-fi-へ接続">Wi-Fi へ接続</h4>
@@ -159,7 +180,8 @@ App Store または Google Play より予めダウンロードしてください
   <li>Espressif ESPtouch ＞ EspTouch にて１の接続先の Wi-Fi アクセスポイントのPassword を入力し、画面下方の Confirm を押します。</li>
   <li>「”Esptouch”がローカルネットワーク上のデバイスの検索および接続を求めています」が出た場合、「許可」してください。</li>
   <li>数秒後、下図のように接続成功画面が表示されたら、M5Stack が Wi-Fi へ接続完了になります。
-※Esptouch バージョンによって画面が違う可能性があります。</li>
+※Esptouch バージョンによって画面が違う可能性があります。
+<img src="../images/11.png" alt="Esptouch" /></li>
   <li>M5Stack 側の画面上に自分の IP アドレスが表示されます。
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IP address : 192.168.0.xx
 </code></pre></div>    </div>
@@ -167,19 +189,43 @@ App Store または Google Play より予めダウンロードしてください
 </ol>
 
 <h4 id="pc-とジョイパッドの接続">PC とジョイパッドの接続</h4>
-<p>※ワイヤレスコントローラー(DUALSHOCK 4)のみでの対応となります。</p>
+<p>※ワイヤレスコントローラー(DUALSHOCK 4)のみでの対応となります。
+<img src="../images/12.png" alt="DUALSHOCK4" /></p>
 
 <ol>
-  <li>初回ペアリング時は SHARE ボタンと PS ボタンを長押し、側面の LED パターンの点滅が早くなる状態にします。</li>
+  <li>初回ペアリング時は SHARE ボタンと PS ボタンを長押し、側面の LED パターンの点滅が早くなる状態にします。<br />
+<img src="../images/13.png" alt="pairing" /></li>
   <li>この状態のときに Windows の設定画面より Bluetooth デバイスを追加するボタンを押してください。</li>
   <li>デバイスの候補から Wireless Controller が表示されていると思いますので、追加してください。</li>
   <li>ペアリングが無事行われているときは LED 部分が白色もしくは青色に点灯します。ペアリングが済んでいる場合は PS ボタンを一回押すと再接続が行われます。</li>
 </ol>
 
-<h3 id="起動手順走行台車への接続方法windowsソフト">起動手順　走行台車への接続方法(windowsソフト)</h3>
-<h2 id="m5stack走行台車pluswindowsバージョンサンプルソフト操作方法">M5Stack走行台車PLUS(windowsバージョン)サンプルソフト操作方法</h2>
-<h3 id="操作方法">操作方法</h3>
+<h3 id="起動手順">起動手順</h3>
+<h4 id="走行台車への接続方法windows-ソフト">走行台車への接続方法（Windows ソフト）</h4>
+<ol>
+  <li>Wi-Fi ルータの電源が入っていることを確認します。</li>
+  <li>PC の Wi-Fi 接続を確認します。</li>
+  <li>走行台車 Plus の電源を投入し、正しく立ち上がることを確認します。</li>
+  <li>PC 側のデスクトップにあるアイコン<img src="../images/14.png" alt="appicon" />をダブルクリックし、<br />
+LTR Connected Vehicle を起動します。<br />
+<img src="../images/15.png" alt="app" /></li>
+  <li>Vehicle IP Address に上記取得した M5Stack の IP アドレスを入力し、接続ボタンを押します。
+Vehicle Status が接続中になったら接続完了になります。</li>
+</ol>
 
+<h2 id="操作方法windows-の場合">操作方法（Windows の場合）</h2>
+<h3 id="ソフト上での操作">ソフト上での操作</h3>
+<p>操作を行うには、操作情報 ＞ 右モータ・左モータの数値を記入し、更新を押すと、記入した数値でモータが回転を行います。
+左右モータ共、プラス数値：前転、マイナス数値：後転、0：停止の動作を行います。</p>
+<h3 id="コントローラーでの操作">コントローラーでの操作</h3>
+<p>ワイヤレスコントローラー(DUALSHOCK 4)のみでの対応となります。<br />
+<img src="../images/16.png" alt="operatedualshock" /><br />
+コントローラー操作を行う場合は、操作情報 ＞ JOYSTICK MODEにチェックを入れてください。同じく、操作情報 ＞ 上下反転、左右反転にもチェックを入れてください。</p>
+
+<p>上下反転と左右反転にチェックを入れた状態では、コントローラーの左スティックが左モータ、右スティックが右モータに対応しており、どちらともスティックを前に傾ければ前転、後ろに傾ければ後転の動作を行います。</p>
+
+<p>下記が DUALSHOCK 4 利用時の基本状態になります。<br />
+<img src="../images/17.png" alt="operateapp" /></p>
 
 						</div><!-- /.content -->
 					</div><!-- /.col -->
@@ -194,6 +240,36 @@ App Store または Google Play より予めダウンロードしてください
 		
 		<div class="js-footer-area">
 			
+				<nav class="page-nav">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								
+								
+									<a href="/plus-doc/hardware" class="page-nav__item page-nav__item--next">
+										ハードウェア
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+			
+				<div class="micro-nav">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<a href="/plus-doc/" class="micro-nav__back">
+					<i class="icon icon--arrow-left"></i>
+					Back to homepage
+				</a><!-- /.micro-nav__back -->
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.micro-nav -->
+
 			
 			
 	<footer class="site-footer">
@@ -208,18 +284,6 @@ App Store または Google Play より予めダウンロードしてください
 						<p class="site-footer__copyright">Copyright &copy; 2023. - Life Tech Robotics <br>All rights reserved.</p>
 					
 				</div><!-- /.col -->
-				
-					<div class="col-sm-6 align-right">
-						<ul class="social-list">
-							
-								<li>
-									<a href="#" target="_blank" class="social-list__item social-list__item--youtube">
-										<i class="icon icon--youtube"></i>
-									</a>
-								</li>
-							
-						</ul><!-- /.social-list -->
-					</div><!-- /.col -->
 				
 			</div><!-- /.row -->
 		</div><!-- /.container -->

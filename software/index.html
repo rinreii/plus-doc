@@ -19,9 +19,13 @@
 	<div class="offcanvas visible-xs">
 		<ul class="offcanvas__nav">
 			
-				<li><a href="/plus-dochttps://ltrobo.com/%e5%b0%8f%e5%9e%8b%e8%b5%b0%e8%a1%8c%e3%83%ad%e3%83%9c%e3%83%83%e3%83%88-plus/">製品ページ</a></li>
+				<li><a href="/plus-doc/manual">マニュアル</a></li>
 			
-				<li><a href="/plus-dochttps://ltrobo.com/infomation_accses/">お問い合わせ</a></li>
+				<li><a href="/plus-doc/hardware">ハードウェア</a></li>
+			
+				<li><a href="/plus-doc/software">ソフトウェア</a></li>
+			
+				<li><a href="/plus-doc/download">ダウンロード</a></li>
 			
 		</ul><!-- /.offcanvas__nav -->
 	</div><!-- /.offcanvas -->
@@ -38,9 +42,13 @@
 					
 						<ul class="site-header__nav hidden-xs">
 							
-								<li><a href="/plus-dochttps://ltrobo.com/%e5%b0%8f%e5%9e%8b%e8%b5%b0%e8%a1%8c%e3%83%ad%e3%83%9c%e3%83%83%e3%83%88-plus/">製品ページ</a></li>
+								<li><a href="/plus-doc/manual">マニュアル</a></li>
 							
-								<li><a href="/plus-dochttps://ltrobo.com/infomation_accses/">お問い合わせ</a></li>
+								<li><a href="/plus-doc/hardware">ハードウェア</a></li>
+							
+								<li><a href="/plus-doc/software">ソフトウェア</a></li>
+							
+								<li><a href="/plus-doc/download">ダウンロード</a></li>
 							
 						</ul><!-- /.site-header__nav -->
 						<button class="offcanvas-toggle visible-xs">
@@ -68,6 +76,19 @@
 									<p class="hero-subheader__desc">開発環境、利用する通信プロトコルおよび各種設定について記述します。</p>
 								
 								
+									
+										<a href="/plus-doc/hardware" class="btn btn--dark btn--rounded btn--w-icon btn--w-icon-left">
+											<i class="icon icon--arrow-left"></i>
+											ハードウェア
+										</a>
+									
+									
+										<a href="/plus-doc/download" class="btn btn--dark btn--rounded btn--w-icon">
+											<i class="icon icon--arrow-right"></i>
+											ダウンロード
+										</a>
+									
+								
 							</div><!-- /.align-inner -->
 						</div><!-- /.align-container -->
 					</div><!-- /.col -->
@@ -81,14 +102,81 @@
 					<div class="col-md-7">
 						<div class="content">
 							<h2 id="開発環境">開発環境</h2>
+<p>Visual Studio Code + PlatformIO<br />
+M5Stack のライブラリをインストールしてください</p>
 
-<h3 id="ハードウェア環境設定">ハードウェア環境設定</h3>
+<h2 id="ハードウェア環境設定">ハードウェア環境設定</h2>
+<p>１）モータドライバとの接続<br />
+　GND（モータドライバ）&lt;=&gt;GND（M5Stack） <br />
+　DIG1（モータドライバ）&lt;=&gt;T2（M5Stack）</p>
 
-<h3 id="通信プロトコルについて">通信プロトコルについて</h3>
+<p>２）モータドライバIPスイッチ<br />
+　・Serial Simple Mode<br />
+　・通信速度 115200</p>
 
-<h3 id="m5stackの起動動作について">M5Stackの起動動作について</h3>
+<p>　DIP=11011100(SW1〜SW8）</p>
+<h2 id="通信プロトコルについて">通信プロトコルについて</h2>
+<p>１）M5Stack（ESP32）のリセット<br />
+###,RST</p>
 
-<h2 id="更新履歴">更新履歴</h2>
+<p>２）Wi-Fi 設定の消去（SSID, KEY, IP, GATEWAY の消去）<br />
+###,WES</p>
+
+<p>３）IP アドレス設定<br />
+###,SIP,192,168,0,110</p>
+
+<p>４）GATEWAY 設定<br />
+###,SGW,192,168,0,1</p>
+
+<p>５）モータ（とLED）への指令<br />
+###,20,20,000,000<br />
+###：ヘッダー（固定）<br />
+20：右モーターの指令値（-63〜+63）<br />
+20：左モーターの指令値（-63〜+63）<br />
+000：LED1 の輝度<br />
+000：LED2 の輝度</p>
+
+<h2 id="m5stack-の起動動作について">M5Stack の起動動作について</h2>
+<p>Wi-Fi で AP に接続する場合には、Smart Config モードにしてスマフォの ESPTouch を使って設定します。</p>
+
+<p>１）Wi-Fi 初期化<br />
+　電源投入時（リセットからの起動時）に[C]を押しながら起動する</p>
+
+<p>２）Mac アドレスの表示延長<br />
+　Macアドレスが表示される画面の時に[A]を押し続けると離すまで処理を一時停止して表示したままになる</p>
+
+<p>３）モータデモモード<br />
+　起動中に「TEST MODE PUSH [A]」が表示されている間（約 2 秒間）に[A]を押すとテストモードで起動する<br />
+　モータへの指令値を[A][B][C]で設定できるようになる<br />
+　[A]加算<br />
+　[B]減算<br />
+　[C]停止</p>
+
+<p>４）M5Stack が Wi-Fi で AP に接続されている場合には、クライアント接続待機中になる。<br />
+　「Wi-Fi : Client does not Connect !!」</p>
+
+<p>　　クライアントが接続されると<br />
+　「Wi-Fi : Client Connected !!」</p>
+
+<p>　IP アドレスが表示されます。<br />
+　この IP アドレスを Windows クライアントの接続先 IP に設定してください。</p>
+
+<p>５）Wi-Fi で AP に接続できない場合<br />
+　以下のメニューが表示されます。</p>
+
+<p>　Smart Config[A]　　　・・・ESPTouchでSSID,KEYを設定できます<br />
+　IP/GATEWAY[B]　　　　・・・IPアドレスとGATEWAYを設定できます<br />
+　Reset[C]　　　　　　 ・・・リセットします</p>
+
+<p>　メニュー選択中は文字が赤色になります。</p>
+
+<p>６）IP/GATEWAY
+　赤い文字が選択中です。<br />
+　数値は、[A]で＋、[B]で−されます。[C]で次の項目へ移動します</p>
+
+<p>　「Set &amp; Exit」が赤い時に[A]を押すと設定が保存されて再起動します<br />
+　「Reset」が赤い時に[A]を押すと保存せずに再起動します<br />
+ 　[C]で次の項目へ移動します</p>
 
 						</div><!-- /.content -->
 					</div><!-- /.col -->
@@ -103,6 +191,41 @@
 		
 		<div class="js-footer-area">
 			
+				<nav class="page-nav">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								
+									<a href="/plus-doc/hardware" class="page-nav__item page-nav__item--prev">
+										<i class="icon icon--arrow-left"></i>
+										ハードウェア
+									</a><!-- /.page-nav__item -->
+								
+								
+									<a href="/plus-doc/download" class="page-nav__item page-nav__item--next">
+										ダウンロード
+										<i class="icon icon--arrow-right"></i>
+									</a><!-- /.page-nav__item -->
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.container -->
+				</nav><!-- /.page-nav -->
+			
+			
+				<div class="micro-nav">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<a href="/plus-doc/" class="micro-nav__back">
+					<i class="icon icon--arrow-left"></i>
+					Back to homepage
+				</a><!-- /.micro-nav__back -->
+			</div><!-- /.col -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.micro-nav -->
+
 			
 			
 	<footer class="site-footer">
@@ -117,18 +240,6 @@
 						<p class="site-footer__copyright">Copyright &copy; 2023. - Life Tech Robotics <br>All rights reserved.</p>
 					
 				</div><!-- /.col -->
-				
-					<div class="col-sm-6 align-right">
-						<ul class="social-list">
-							
-								<li>
-									<a href="#" target="_blank" class="social-list__item social-list__item--youtube">
-										<i class="icon icon--youtube"></i>
-									</a>
-								</li>
-							
-						</ul><!-- /.social-list -->
-					</div><!-- /.col -->
 				
 			</div><!-- /.row -->
 		</div><!-- /.container -->
